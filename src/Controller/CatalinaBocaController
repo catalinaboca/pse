@@ -1,0 +1,26 @@
+<?php
+
+namespace App\Controller;
+
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\Routing\Annotation\Route;
+
+class FirstPageCatalinaBocaController extends AbstractController
+{
+    #[Route('/catalina-boca')]')]
+    public function index(): Response
+    {
+        return $this->render('first_page_catalina_boca/index.html.twig', [
+            'controller_name' => 'FirstPageCatalinaBocaController',
+            'Materie' => 'Proiect Software in echipa',
+            'Data' => '21.04.2022',
+            'Profesor'=>'Ciprian Cucu',
+            'Student' => 'Catalina Boca'
+        ],
+        'Universitate' =>'Universitatea 1 Decembrie 1918,Alba Iulia',
+        'Master' => 'Programare avansata si baze de date',
+        'An universitar' => '2021/2022',
+        'An studiu'=>'II');
+    }
+}
